@@ -2,6 +2,32 @@
    Module/Posts
    ======================= */
 
+// = Responsive structure
+// -----------------------------
+
+.m-post-contenair
+{
+	@media screen and (min-width: $medium) {
+		width:50%;
+		float:left;
+	}
+	@media screen and (min-width: $large) {
+		width:33%;
+		padding-right:21px;
+	}
+}
+
+.m-post-contenair:nth-child(3n+0)
+{
+	@media screen and (min-width: $large) {
+		padding-right:none;
+	}
+}
+
+// = Styling
+// -----------------------------
+
+
 .m-posts 
 {
 
@@ -22,6 +48,7 @@
 
 	.text-container 
 	{
+		padding:1px;
 		border-left:1px solid $bg-grey;
 		border-right:1px solid $bg-grey;
 		border-bottom:1px solid $bg-grey;

@@ -33,17 +33,10 @@
  * Image replacement
  */
 .ir {
-  background-color: transparent;
-  border: 0;
+  text-indent: 100%;
+  white-space: nowrap;
   overflow: hidden;
-  /* IE 6/7 fallback */
-  *text-indent: -9999px; }
-
-.ir:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 150%; }
+  background-repeat: no-repeat; }
 
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
@@ -153,58 +146,6 @@
 
 .txtright {
   text-align: right; }
-
-/* ===========================
-   Tools/Grille
-   =========================== */
-@media screen and (min-width: 62em) {
-  .float-middle {
-    width: 50%;
-    float: left;
-    margin: 0;
-    padding: 0; } }
-
-@media screen and (min-width: 62em) {
-  .float-quart {
-    width: 25%;
-    float: left;
-    margin: 0;
-    padding: 0; } }
-
-@media screen and (min-width: 62em) {
-  .float-trois-quart {
-    width: 75%;
-    float: left;
-    margin: 0;
-    padding: 0; } }
-
-@media screen and (min-width: 62em) {
-  .float-tiers {
-    width: 33.3%;
-    float: left;
-    margin: 0;
-    padding: 0; } }
-
-@media screen and (min-width: 75em) {
-  .large-float-tiers {
-    width: 33.3%;
-    float: left;
-    margin: 0;
-    padding: 0; } }
-
-@media screen and (min-width: 62em) {
-  .float-deux-tiers {
-    width: 64%;
-    float: right;
-    margin: 0;
-    padding: 0; } }
-
-@media screen and (min-width: 75em) {
-  .large-float-deux-tiers {
-    width: 64%;
-    float: right;
-    margin: 0;
-    padding: 0; } }
 
 /* Base */
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
@@ -598,6 +539,11 @@ hr {
   margin: 1em 0;
   padding: 0; }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 img {
   width: 100%; }
 
@@ -671,7 +617,52 @@ textarea {
    ======================= */
 .l-header {
   background: white;
-  border-bottom: 2px solid #eabccb; }
+  border-bottom: 2px solid #eabccb;
+  text-align: center; }
+
+@media screen and (min-width: 62em) {
+  .ir-logo1 {
+    float: left; }
+
+  .nav {
+    float: right;
+    width: 460px; }
+
+  .nav-li {
+    float: left;
+    padding: 30px; } }
+/* LOGO */
+.ir-logo1 {
+  background-image: url("img/ie/logo.jpg");
+  max-width: 130px;
+  background-size: 100%;
+  background-position: center center;
+  margin: 0 auto;
+  padding: 25px 0; }
+
+.backgroundsize .ir-logo1 {
+  background-image: url("img/logo.jpg"); }
+
+/* Nav */
+@media screen and (max-width: 61em) {
+  .nav-li a {
+    width: 100%;
+    display: block;
+    padding: 15px 0;
+    border: 0;
+    border-radius: 0; }
+  .nav-li a:hover {
+    background: #eabccb;
+    color: white;
+    border: 0;
+    font-weight: bold;
+    border-radius: 0; } }
+@media screen and (min-width: 62em) {
+  .nav-li a:hover {
+    background: none;
+    font-weight: normal;
+    border-bottom: 1px solid;
+    color: #484a50; } }
 
 /* ==|====================
    Layout/Nav
@@ -686,6 +677,9 @@ textarea {
 .l-footer-container {
   background: white; }
 
+/* ==|======================
+   Layout/Home
+   ========================= */
 /* Modules */
 /* ==|====================
    Module/Button
@@ -696,7 +690,8 @@ textarea {
   background: #eabccb;
   color: white;
   font-size: 14px;
-  border-radius: 25px; }
+  border-radius: 25px;
+  border: 1px solid transparent; }
   .btn:hover {
     background: white;
     color: #eabccb;
@@ -779,11 +774,52 @@ textarea {
    =================== */
 .m-slide {
   background: url("img/bg-gradient.jpg") center top repeat-y;
-  background-size: 100% 1px; }
+  background-size: 100% 1px;
+  padding: 0; }
+
+.m-slide-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  height: 609px; }
+  .m-slide-wrapper:before {
+    background: url("img/bg-girl.png") no-repeat bottom left;
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 613px;
+    height: 100%;
+    z-index: 10; }
+
+.slide-moving {
+  background: white;
+  max-width: 705px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 5;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%); }
 
 /* ==|====================
    Module/Posts
    ======================= */
+@media screen and (min-width: 62em) {
+  .m-post-contenair {
+    width: 50%;
+    float: left; } }
+@media screen and (min-width: 75em) {
+  .m-post-contenair {
+    width: 33%;
+    padding-right: 21px; } }
+
+@media screen and (min-width: 75em) {
+  .m-post-contenair:nth-child(3n+0) {
+    padding-right: none; } }
+
 .m-post {
   position: relative; }
   .m-post::before {
@@ -794,6 +830,7 @@ textarea {
     background: url("img/bg-gradient-small.jpg") center top repeat-y;
     background-size: 100% 1px; }
   .m-post .text-container {
+    padding: 1px;
     border-left: 1px solid #c8c8c8;
     border-right: 1px solid #c8c8c8;
     border-bottom: 1px solid #c8c8c8; }

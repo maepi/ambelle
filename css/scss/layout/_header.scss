@@ -5,4 +5,82 @@
 .l-header {
 	background:white;
 	border-bottom: 2px solid $color2;
+	text-align:center;
+}
+
+
+// = Responsive structure
+// -----------------------------
+
+@media screen and (min-width: $medium) {
+	.ir-logo1 
+	{
+		float:left;
+	}
+	.nav 
+	{
+		float:right;
+		width:460px;
+	}
+	.nav-li
+	{
+		float:left;
+		padding:30px;
+	}
+}
+
+
+// = Styling
+// -----------------------------
+
+
+/* LOGO */
+// ----------------
+
+.ir-logo1
+{
+	background-image: url("img/ie/logo.jpg");
+	max-width:130px;
+	background-size:100%;
+	background-position:center center;
+	margin:0 auto;
+	padding:25px 0;
+}
+.backgroundsize .ir-logo1
+{
+	background-image: url("img/logo.jpg");
+}
+
+
+/* Nav */
+// ----------------
+.nav-li
+{
+	@media screen and (max-width: $medium - 1 ) {
+		a 
+		{
+			width:100%;
+			display:block;
+			padding:15px 0;
+			border:0;
+			border-radius:0;
+		}
+		a:hover 
+		{
+			background:$pink;
+			color:white;
+			border:0;
+			font-weight:bold;
+			border-radius:0;
+		}
+	}
+	@media screen and (min-width: $medium ) {
+		a:hover 
+		{
+			background:none;
+			font-weight:normal;
+			border-bottom:1px solid; 
+			color:$grey;
+		}
+	}
 }

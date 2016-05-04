@@ -16,7 +16,6 @@
 @import "tools/site-settings";
 @import "tools/mixins";
 @import "tools/helpers";
-@import "tools/grille";
 
 /* Base */
 @import "base/normalize";
@@ -28,6 +27,7 @@
 @import "layout/header";
 @import "layout/nav";
 @import "layout/footer";
+@import "layout/home";
 
 /* Modules */
 @import "modules/btn";

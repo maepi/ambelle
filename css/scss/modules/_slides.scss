@@ -6,4 +6,38 @@
 {
     background:url("img/bg-gradient.jpg") center top repeat-y;
     background-size: 100% 1px;
+    padding:0; 
+}
+
+.m-slide-wrapper
+{
+	position:relative;
+    overflow:hidden;
+    padding:0;
+    height: 609px;
+	&:before 
+	{	
+		background:url("img/bg-girl.png") no-repeat bottom left;
+		content:" ";
+		position:absolute;
+		bottom:0;
+		left:0;
+		display:block;
+		width:613px;
+		height:100%;
+		z-index:10;
+	}
+}
+
+.slide-moving
+{
+	background:white;
+	max-width:705px;
+	position:absolute;
+	top:50%;
+	right:0;
+	z-index:5;
+	-webkit-transform:translateY(-50%);
+	   -moz-transform:translateY(-50%);
+	        transform:translateY(-50%);
 }
