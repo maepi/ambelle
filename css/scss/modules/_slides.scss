@@ -9,6 +9,8 @@
     padding:0; 
 }
 
+//Structure Responsive
+// -----------------------------
 .m-slide-wrapper
 {
 	position:relative;
@@ -36,8 +38,45 @@
 	position:absolute;
 	top:50%;
 	right:0;
+	padding:30px 74px;
 	z-index:5;
 	-webkit-transform:translateY(-50%);
 	   -moz-transform:translateY(-50%);
 	        transform:translateY(-50%);
+}
+
+//Style 
+// -----------------------------
+
+.m-slide
+{
+    text-align:center;
+    
+    h2 
+    {
+    	opacity:0.8;
+    	margin:40px;
+    	@extend .specialtypo;
+    	font-size:4.5em;
+    	line-height:1;
+    	span 
+    	{
+    		display:block;
+    		font-size:0.3em;
+    	}
+    }
+    p 
+    {
+    	font-weight: lighter;
+    }
+
+}
+
+.text-mini 
+{
+    font-size:13px; 
+    a 
+    {
+        text-decoration:underline;
+    }
 }
