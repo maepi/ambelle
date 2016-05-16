@@ -797,41 +797,58 @@ textarea {
 .m-slide-wrapper {
   position: relative;
   overflow: hidden;
-  padding: 0;
-  height: 609px; }
-  .m-slide-wrapper:before {
-    background: url("img/bg-girl.png") no-repeat bottom left;
-    content: " ";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: block;
-    width: 613px;
-    height: 100%;
-    z-index: 10; }
+  padding: 0; }
+  @media screen and (min-width: 62em) {
+    .m-slide-wrapper {
+      height: 609px; }
+      .m-slide-wrapper:before {
+        background: url("img/bg-girl.png") no-repeat bottom left;
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 613px;
+        height: 100%;
+        z-index: 3; } }
+  @media screen and (min-width: 75em) {
+    .m-slide-wrapper:before {
+      z-index: 10; } }
 
 .slide-moving {
   background: white;
-  max-width: 705px;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  padding: 30px 74px;
+  padding: 30px 4%;
   z-index: 5;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  margin: 30px 4.5%; }
+  @media screen and (min-width: 62em) {
+    .slide-moving {
+      position: absolute;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 30px 74px;
+      top: 50%;
+      right: 0;
+      max-width: 705px;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      transform: translateY(-50%); } }
 
 .m-slide {
   text-align: center; }
   .m-slide h2 {
     opacity: 0.8;
     margin: 40px;
-    font-size: 4.5em;
+    font-size: 3em;
     line-height: 1; }
+    @media screen and (min-width: 62em) {
+      .m-slide h2 {
+        font-size: 4.5em; } }
     .m-slide h2 span {
       display: block;
-      font-size: 0.3em; }
+      font-size: 0.5em; }
+      @media screen and (min-width: 62em) {
+        .m-slide h2 span {
+          font-size: 0.3em; } }
   .m-slide p {
     font-weight: lighter; }
 
@@ -870,5 +887,31 @@ textarea {
     border-left: 1px solid #c8c8c8;
     border-right: 1px solid #c8c8c8;
     border-bottom: 1px solid #c8c8c8; }
+
+/* ==|================
+   Module/Steps
+   =================== */
+.m-steps {
+  color: #7f8084;
+  font-size: 15px;
+  text-align: center;
+  line-height: 1; }
+  .m-steps li {
+    margin: 40px;
+    position: relative;
+    display: inline-block;
+    width: 102px; }
+    .m-steps li::after {
+      content: "";
+      display: block;
+      background: #f7ebca;
+      width: 92px;
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      height: 1px; }
+  .m-steps span {
+    display: block;
+    text-transform: uppercase; }
 
 /*# sourceMappingURL=screen.css.map */

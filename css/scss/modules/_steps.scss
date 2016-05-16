@@ -1,0 +1,42 @@
+/* ==|================
+   Module/Steps
+   =================== */
+
+
+.m-steps
+{
+	color:#7f8084;
+	font-size:15px;
+	text-align:center;
+	line-height:1;
+	li 
+	{
+		margin:40px;
+		position:relative;
+		display:inline-block;
+		width:102px;
+		&::after 
+		{
+			content:"";
+			display:block;
+			background:$yellow;
+			width:92px;
+			position:absolute;
+			left:100%;
+			top:50%;
+			height: 1px;
+		}
+	}
+	li:last-child 
+	{
+		&::after 
+		{
+
+		}
+	}
+	span 
+	{
+		display:block;
+		text-transform:uppercase;
+	}
+}
