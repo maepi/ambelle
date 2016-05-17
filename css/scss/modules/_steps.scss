@@ -9,29 +9,43 @@
 	font-size:15px;
 	text-align:center;
 	line-height:1;
+	margin-bottom:30px;
 	li 
-	{
-		margin:40px;
+	{ 
+		margin:25px auto;
 		position:relative;
-		display:inline-block;
 		width:102px;
-		&::after 
-		{
-			content:"";
-			display:block;
-			background:$yellow;
-			width:92px;
-			position:absolute;
-			left:100%;
-			top:50%;
-			height: 1px;
-		}
+		padding-top:60px;
+		background: url('img/sprite-icons-slide.jpg') center top no-repeat;
+		@media screen and (min-width: $medium) {
+			display:inline-block;
+			margin:25px;
+			&::after 
+			{
+				content:"";
+				display:block;
+				background:$yellow;
+				width:92px;
+				position:absolute;
+				left:86px;
+				top:20px;
+				height: 1px;
+			}
+		}	
+	}
+	.step-person
+	{
+		background-position: center -147px;
+	}
+	.step-magic 
+	{
+		background-position: center -284px;
 	}
 	li:last-child 
 	{
 		&::after 
 		{
-
+			display:none;
 		}
 	}
 	span 

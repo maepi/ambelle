@@ -12,15 +12,15 @@
 		float:left;
 	}
 	@media screen and (min-width: $large) {
-		width:33%;
-		padding-right:21px;
+		width:32%;
+		margin-right:2%;
 	}
 }
 
 .m-post-contenair:nth-child(3n+0)
 {
 	@media screen and (min-width: $large) {
-		padding-right:none;
+		margin-right:0;
 	}
 }
 
@@ -30,7 +30,7 @@
 
 .m-posts 
 {
-
+	margin:46px 0 123px;
 }
 
 .m-post 

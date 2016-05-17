@@ -15,7 +15,7 @@
   font-style: normal;
 }
 
-[data-icon]:before {
+[data-icon]:before, .iconreplace {
   font-family: "iconsfont" !important;
   content: attr(data-icon);
   font-style: normal !important;
@@ -29,7 +29,7 @@
 }
 
 [class^="icon-"]:before,
-[class*=" icon-"]:before {
+[class*=" icon-"]:before, .iconreplace:before {
   font-family: "iconsfont" !important;
   font-style: normal !important;
   font-weight: normal !important;

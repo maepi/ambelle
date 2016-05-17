@@ -735,7 +735,7 @@ textarea {
   src: url("fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("fonts/icons/icons.woff") format("woff"), url("fonts/icons/icons.ttf") format("truetype"), url("fonts/icons/icons.svg#iconsfont") format("svg");
   font-weight: normal;
   font-style: normal; }
-[data-icon]:before {
+[data-icon]:before, .iconreplace {
   font-family: "iconsfont" !important;
   content: attr(data-icon);
   font-style: normal !important;
@@ -748,7 +748,7 @@ textarea {
   -moz-osx-font-smoothing: grayscale; }
 
 [class^="icon-"]:before,
-[class*=" icon-"]:before {
+[class*=" icon-"]:before, .iconreplace:before {
   font-family: "iconsfont" !important;
   font-style: normal !important;
   font-weight: normal !important;
@@ -866,12 +866,15 @@ textarea {
     float: left; } }
 @media screen and (min-width: 75em) {
   .m-post-contenair {
-    width: 33%;
-    padding-right: 21px; } }
+    width: 32%;
+    margin-right: 2%; } }
 
 @media screen and (min-width: 75em) {
   .m-post-contenair:nth-child(3n+0) {
-    padding-right: none; } }
+    margin-right: 0; } }
+
+.m-posts {
+  margin: 46px 0 123px; }
 
 .m-post {
   position: relative; }
@@ -895,21 +898,33 @@ textarea {
   color: #7f8084;
   font-size: 15px;
   text-align: center;
-  line-height: 1; }
+  line-height: 1;
+  margin-bottom: 30px; }
   .m-steps li {
-    margin: 40px;
+    margin: 25px auto;
     position: relative;
-    display: inline-block;
-    width: 102px; }
-    .m-steps li::after {
-      content: "";
-      display: block;
-      background: #f7ebca;
-      width: 92px;
-      position: absolute;
-      left: 100%;
-      top: 50%;
-      height: 1px; }
+    width: 102px;
+    padding-top: 60px;
+    background: url("img/sprite-icons-slide.jpg") center top no-repeat; }
+    @media screen and (min-width: 62em) {
+      .m-steps li {
+        display: inline-block;
+        margin: 25px; }
+        .m-steps li::after {
+          content: "";
+          display: block;
+          background: #f7ebca;
+          width: 92px;
+          position: absolute;
+          left: 86px;
+          top: 20px;
+          height: 1px; } }
+  .m-steps .step-person {
+    background-position: center -147px; }
+  .m-steps .step-magic {
+    background-position: center -284px; }
+  .m-steps li:last-child::after {
+    display: none; }
   .m-steps span {
     display: block;
     text-transform: uppercase; }
