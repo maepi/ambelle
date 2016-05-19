@@ -36,6 +36,10 @@
 .m-post 
 {
 	position:relative;
+	img 
+	{
+		vertical-align: middle;
+	}
 	&::before 
 	{
 		content:"";
@@ -45,12 +49,48 @@
 		background:url("img/bg-gradient-small.jpg") center top repeat-y;
     	background-size: 100% 1px;
 	}
-
 	.text-container 
 	{
-		padding:1px;
 		border-left:1px solid $bg-grey;
 		border-right:1px solid $bg-grey;
 		border-bottom:1px solid $bg-grey;
+		padding:30px;
 	}
+
+	// = Text
+	p, .title 
+	{
+		margin:0;
+	}
+	p 
+	{	
+		font-size:18px;
+		font-weight:lighter;
+	}
+	.title 
+	{
+		text-transform:uppercase;
+		font-weight:normal;
+		margin-bottom:35px;
+		font-size:24px;
+		line-height:1.2;
+	}
+
+	// = Footer
+	.footer 
+	{
+		@extend .clearfix;
+		border-top:1px solid $bg-grey;
+		padding: 10px 0 0;
+    	margin: 5px 0 0;
+	}
+	.btn-pin
+	{
+		float:right;
+	}
+	.btn-likes
+	{
+		float:left;
+	}
+
 }

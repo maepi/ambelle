@@ -15,7 +15,7 @@
   font-style: normal;
 }
 
-[data-icon]:before, .iconreplace {
+[data-icon]:before, .iconreplace,{
   font-family: "iconsfont" !important;
   content: attr(data-icon);
   font-style: normal !important;
@@ -28,8 +28,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 [class^="icon-"]:before,
-[class*=" icon-"]:before, .iconreplace:before {
+[class*=" icon-"]:before, .iconreplace:before ,.iconadd {
   font-family: "iconsfont" !important;
   font-style: normal !important;
   font-weight: normal !important;

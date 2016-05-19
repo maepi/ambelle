@@ -23,10 +23,11 @@
  */
 
 .ir {
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    background-repeat:no-repeat;
+      text-indent: 100%;
+      display:block;
+      background-repeat:no-repeat;
+      white-space: nowrap;
+      overflow: hidden;
 }
 
 /*

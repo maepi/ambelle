@@ -11,4 +11,29 @@
 {
 	background:white;
 	@extend .wrapper;
+	padding:79px 106px;
+}
+
+
+// = Btns medias 
+//------------------------
+.btn-medias
+{
+	width:190px;
+	margin:0px auto;
+	text-align:center;
+	@extend .clearfix;
+	li 
+	{
+		display:inline-block;
+		width:60px;
+		margin:0;
+		padding:0;
+	}
+	a 
+	{
+		position:relative;
+		top:15px;
+		color:white;
+	}	
 }

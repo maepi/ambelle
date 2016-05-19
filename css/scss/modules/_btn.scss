@@ -2,6 +2,8 @@
    Module/Button
    ======================= */
 
+// = General
+//------------------------
 .btn {
 	text-transform:uppercase;
 	padding:0.5em 1em;
@@ -31,5 +33,71 @@
 	{
 		background: $bg-btn;
 		color:$clr-btn;
+	}
+}
+
+// = Stylings btns
+//------------------------
+
+// = Btn likes 
+.btn-likes
+{
+	&::before 
+	{
+		@extend .iconadd;
+		content: "\65";
+		position: relative;
+    	margin-right: 5px;
+    	top: 2px;
+	}
+}
+// = Btn Pinterest
+.btn-pin
+{
+	@extend .ir;
+	width:52px;
+	height:23px;
+	background:url('img/sprite-logos.png') no-repeat center center;
+}
+// = Social medias
+// Facebook
+.btn-facebook
+{
+	span 
+	{
+		@extend .ir;
+	}
+	&::before 
+	{
+		@extend .iconadd;
+		content: "\63";
+	}
+}
+// Twitter 
+.btn-twitter
+{
+	span 
+	{
+		@extend .ir;
+	}
+	&::before 
+	{
+		@extend .iconadd;
+		content: "\68";
+	}
+}
+
+
+// = Stylings links
+//------------------------
+.link-pink 
+{
+	color: $pink;
+	font-weight:lighter;
+	font-size:15px;
+	&::before 
+	{
+		content:"▸";
+		margin-right:7px;
 	}
 }

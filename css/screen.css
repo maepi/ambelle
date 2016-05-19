@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  * SMACSS + SCSS starter v2.0
  * Inspired by SMACSS http://smacss.com
@@ -32,11 +33,12 @@
 /*
  * Image replacement
  */
-.ir {
+.ir, .btn-pin, .btn-facebook span, .btn-twitter span {
   text-indent: 100%;
+  display: block;
+  background-repeat: no-repeat;
   white-space: nowrap;
-  overflow: hidden;
-  background-repeat: no-repeat; }
+  overflow: hidden; }
 
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
@@ -88,21 +90,23 @@
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, .btn-medias:before, .m-post .footer:before,
+.clearfix:after,
+.btn-medias:after,
+.m-post .footer:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.clearfix:after {
+.clearfix:after, .btn-medias:after, .m-post .footer:after {
   clear: both; }
 
 /*
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-.clearfix {
+.clearfix, .btn-medias, .m-post .footer {
   *zoom: 1; }
 
 /* =Layout
@@ -649,6 +653,7 @@ textarea {
 .ir-logo1 {
   background-image: url("img/ie/logo.jpg");
   max-width: 130px;
+  background-repeat: no-repeat;
   background-size: 100%;
   background-position: center center;
   margin: 0 auto;
@@ -692,7 +697,22 @@ textarea {
   background-size: 100% 1px; }
 
 .l-footer-container {
-  background: white; }
+  background: white;
+  padding: 79px 106px; }
+
+.btn-medias {
+  width: 190px;
+  margin: 0px auto;
+  text-align: center; }
+  .btn-medias li {
+    display: inline-block;
+    width: 60px;
+    margin: 0;
+    padding: 0; }
+  .btn-medias a {
+    position: relative;
+    top: 15px;
+    color: white; }
 
 /* ==|======================
    Layout/Home
@@ -726,6 +746,31 @@ textarea {
     background: #eabccb;
     color: white; }
 
+.btn-likes::before {
+  content: "\65";
+  position: relative;
+  margin-right: 5px;
+  top: 2px; }
+
+.btn-pin {
+  width: 52px;
+  height: 23px;
+  background: url("img/sprite-logos.png") no-repeat center center; }
+
+.btn-facebook::before {
+  content: "\63"; }
+
+.btn-twitter::before {
+  content: "\68"; }
+
+.link-pink {
+  color: #eabccb;
+  font-weight: lighter;
+  font-size: 15px; }
+  .link-pink::before {
+    content: "▸";
+    margin-right: 7px; }
+
 /* ==|================
    Module/Icons
    =================== */
@@ -748,7 +793,7 @@ textarea {
   -moz-osx-font-smoothing: grayscale; }
 
 [class^="icon-"]:before,
-[class*=" icon-"]:before, .iconreplace:before {
+[class*=" icon-"]:before, .iconreplace:before, .iconadd, .btn-likes::before, .btn-facebook::before, .btn-twitter::before {
   font-family: "iconsfont" !important;
   font-style: normal !important;
   font-weight: normal !important;
@@ -878,6 +923,8 @@ textarea {
 
 .m-post {
   position: relative; }
+  .m-post img {
+    vertical-align: middle; }
   .m-post::before {
     content: "";
     position: absolute;
@@ -886,10 +933,29 @@ textarea {
     background: url("img/bg-gradient-small.jpg") center top repeat-y;
     background-size: 100% 1px; }
   .m-post .text-container {
-    padding: 1px;
     border-left: 1px solid #c8c8c8;
     border-right: 1px solid #c8c8c8;
-    border-bottom: 1px solid #c8c8c8; }
+    border-bottom: 1px solid #c8c8c8;
+    padding: 30px; }
+  .m-post p, .m-post .title {
+    margin: 0; }
+  .m-post p {
+    font-size: 18px;
+    font-weight: lighter; }
+  .m-post .title {
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 35px;
+    font-size: 24px;
+    line-height: 1.2; }
+  .m-post .footer {
+    border-top: 1px solid #c8c8c8;
+    padding: 10px 0 0;
+    margin: 5px 0 0; }
+  .m-post .btn-pin {
+    float: right; }
+  .m-post .btn-likes {
+    float: left; }
 
 /* ==|================
    Module/Steps
