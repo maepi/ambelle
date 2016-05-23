@@ -11,7 +11,8 @@
 {
 	background:white;
 	@extend .wrapper;
-	padding:79px 106px;
+	padding:79px 5% 150px;
+	position:relative;
 }
 
 
@@ -36,4 +37,90 @@
 		top:15px;
 		color:white;
 	}	
+}
+
+// = Structure
+//------------------------
+.footer-right
+{
+	margin-top:50px;
+}
+@media screen and (min-width: $medium) {
+	.l-footer-container 
+	{
+		padding:79px 106px;
+	}
+	.footer-left 
+	{
+		float:left;
+		width:60%;
+		border-right:1px solid $grey-light;
+		padding:0 90px 0 21px;
+		position:relative;
+		height:100%;
+	}
+	.footer-right
+	{
+		float:right;
+		margin-top:0;
+		width:40%;
+		padding:0 21px 0 110px;
+	}
+}
+
+// = Styles
+//------------------------
+
+.l-footer
+{
+	font-weight:lighter;
+}
+
+h3 
+{
+	text-transform:uppercase;
+	font-weight:normal;
+}
+
+.footer-right
+{
+	input, .btn 
+	{
+		width:100%;
+		margin-bottom:22px;
+		max-width:400px
+	}
+	.btn 
+	{
+		font-weight:bold;
+		margin-bottom:0;
+		padding-bottom:0;
+	}
+}
+
+.copyright 
+{
+	position:absolute;
+	bottom:30px;
+	&::before 
+	{
+		content:"|";
+		position:absolute;;
+		top:0;
+		color:$pink;
+		left:0;
+	}
+	p 
+	{
+		padding:0;
+		margin:0 0 0 13px;
+		font-weight:normal;
+	}
+	.legend
+	{
+		font-weight:lighter;
+	}
+	@media screen and (min-width: $medium) {
+		bottom:0;
+	}
 }

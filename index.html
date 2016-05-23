@@ -13,13 +13,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
         <script src="js/libs/modernizr.js"></script>
+        <script src="js/libs/jquery-1.11.2.js"></script>
+        <script src="js/libs/equalizer.js"></script>
+
+        <script src="js/events.js"></script>
 
     </head>
     <body>
+
         <header role="header" class="l-header">
             <div class="wrapper clearfix">
                 <h1 class="ir ir-logo1">Ambelle</h1>
-                <nav class="nav">
+                <div class="toggle-btn">
+                    close nav
+                </div>
+
+                <nav class="l-nav nav">
                     <ul class="clearfix">
                         <li class="nav-li"><a href="fake.html">About</a></li>
                         <li class="nav-li"><a href="fake.html">Log-in</a></li>
@@ -41,7 +50,7 @@
                                 <li class="step-person"><span>Create</span>your account</li>
                                 <li class="step-magic"><span>Get your</span>beauty feed</li>
                             </ul>
-                            <a href="fake.html" class="btn">Take the test</a>
+                            <a href="fake.html" class="btn" id="takethetest">Take the test</a>
                             <p class="text-mini ">Already a member? <a href="">Log in</a></p>
                         </div> 
                     </div>
@@ -61,7 +70,7 @@
                                     <a href="" class="link-pink">www.fake.com</a>
                                     <div class="footer">
                                         <p class="btn-likes">12</p>
-                                        <a href="fake.html" class="btn-pint">Pin it</a>
+                                        <a href="fake.html" class="btn-pin">Pin it</a>
                                     </div>
                                 </div>
                             </article>
@@ -75,7 +84,7 @@
                                     <a href="" class="link-pink">www.fake.com</a>
                                     <div class="footer">
                                         <p class="btn-likes">12</p>
-                                        <a href="fake.html" class="btn-pint">Pin it</a>
+                                        <a href="fake.html" class="btn-pin">Pin it</a>
                                     </div>
                                 </div>
                             </article>
@@ -89,7 +98,7 @@
                                     <a href="" class="link-pink">www.fake.com</a>
                                     <div class="footer">
                                         <p class="btn-likes">12</p>
-                                        <a href="fake.html" class="btn-pint">Pin it</a>
+                                        <a href="fake.html" class="btn-pin">Pin it</a>
                                     </div>
                                 </div>
                             </article>
@@ -104,30 +113,31 @@
                 <li><a href="" class="btn-facebook"><span>Facebook</span></a></li>
                 <li><a href="" class="btn-twitter"><span>Twitter</span></a></li>
             </ul>
-            <div class="l-footer-container">
-                <div>
+            <div class="l-footer-container clearfix">
+                <div class="footer-left" data-equalizer-max="footer">
                     <h3>Stay updated</h3>
                     <p>Suscribe to our newsletter and get twice a month our selection of the best beauty videos.</p>
                     <form>
-                        <fieldset>
-                            <input type="mail" id="email" placeholder="Your email adress"/>
-                            <label class="visuallyhidden" for="email">Your email adress</label>
-                        </fieldset>
-                        <input type="submit" value="Send">
+                        <div class="block-form">
+                            <fieldset class="block-input">
+                                <input type="email" id="email" placeholder="Your email adress"/>
+                                <label class="visuallyhidden" for="email">Your email adress</label>
+                            </fieldset>
+                            <input type="submit" value="Send" class="btn">
+                        </div>
                     </form>
 
-                    <div>
+                    <div class="copyright">
                         <p>About - FAQ - Privacy Policy - Terms and Conditions</p>
-                        <p>© 2015 Ambelle. All rights reserved.</p>
+                        <p class="legend">© 2015 Ambelle. All rights reserved.</p>
                     </div>
                 </div>
-                <div>
+                <div class="footer-right" data-equalizer-max="footer">
                     <h3>Got any feedbacks?</h3>
                     <p>Ambelle is still in Beta. Any advice will help us to improve ourselves!</p>
                     <form>
-                        <h1>Login</h1>
                         <fieldset>
-                            <input type="mail" id="email" placeholder="Your email adress"/>
+                            <input type="email" id="email" placeholder="Your email adress"/>
                             <label class="visuallyhidden" for="email">Your email adress</label>
                         </fieldset>
                         <fieldset>
@@ -143,6 +153,29 @@
                 </div>
             </div>
         </footer>
+        <div id="general-background"></div>
+        <div id="modal" class="m-modal-container hide">
+            <div class="m-modal">
+                <h3>Got any feedbacks?</h3>
+                <p>Ambelle is still in Beta. Any advice will help us to improve ourselves!</p>
+                <form>
+                    <fieldset>
+                        <input type="email" id="email" placeholder="Your email adress"/>
+                        <label class="visuallyhidden" for="email">Your email adress</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="text" id="object" placeholder="Object"/>
+                        <label class="visuallyhidden" for="object">Object</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="text" id="message" placeholder="Your message"/>
+                        <label class="visuallyhidden" for="message">Your message</label>
+                    </fieldset>
+                    <input type="submit" class="btn-invert" value="Send">
+                </form>
+                <div id="closemodal" class="btnclose"></div>
+            </div>
+        </div>
     </body>
 </html>
    

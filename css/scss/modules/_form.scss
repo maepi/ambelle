@@ -1,0 +1,69 @@
+/* ==|================
+   Module/Form search
+   =================== */
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="search"],
+input[type="tel"],
+textarea,  select {
+    font-size: 18px;
+    font-weight: lighter;
+    color: $grey;
+    padding: 11px;
+    outline: 0;
+    border-radius: none;
+    background-color: white;
+    border: none;
+    border-bottom:1px solid $grey-medium;
+    height: 33px;
+    -webkit-appearance: none;
+    box-shadow: none;
+
+    @include placeholder($grey-medium);
+
+    &:hover {
+        //
+    }
+
+    &:focus {
+        //
+    }
+}
+
+.form-search {
+    input[type="text"],
+    .formt-text {
+        @include border-radius(2px 0 0 2px);
+        border-right: none;
+    }
+    .btn {
+        @include border-radius(0 2px 2px 0);
+        vertical-align: top;
+        padding: .35em .6em;
+    }
+} /* .form-search */
+
+.block-form
+{
+    @extend .clearfix;
+    fieldset.block-input, input, .btn
+    {
+        float:left;
+    }
+    input 
+    {
+        border: 1px solid $pink;
+        height:35px;
+    }
+    .btn 
+    {
+        border-radius:0;
+        height:35px;
+        margin-left:-1px;
+    }
+}
+

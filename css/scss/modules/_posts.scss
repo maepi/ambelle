@@ -7,13 +7,22 @@
 
 .m-post-contenair
 {
+	margin-bottom:2%;
 	@media screen and (min-width: $medium) {
-		width:50%;
+		width:49%;
 		float:left;
+		margin-right:2%;
 	}
 	@media screen and (min-width: $large) {
 		width:32%;
 		margin-right:2%;
+	}
+}
+
+.m-post-contenair:nth-child(2n+0)
+{
+	@media screen and (min-width: $medium) and (max-width:1199px) {
+		margin-right:0;
 	}
 }
 
@@ -30,7 +39,13 @@
 
 .m-posts 
 {
-	margin:46px 0 123px;
+	margin: 30px 4.5%;
+	@media screen and (min-width: $medium) {
+		margin:46px 2% 123px;
+	}
+	@media screen and (min-width: $large) {
+		margin:46px 0 123px;
+	}
 }
 
 .m-post 

@@ -90,23 +90,24 @@
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before, .btn-medias:before, .m-post .footer:before,
+.clearfix:before, .btn-medias:before, .m-post .footer:before, .block-form:before,
 .clearfix:after,
 .btn-medias:after,
-.m-post .footer:after {
+.m-post .footer:after,
+.block-form:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.clearfix:after, .btn-medias:after, .m-post .footer:after {
+.clearfix:after, .btn-medias:after, .m-post .footer:after, .block-form:after {
   clear: both; }
 
 /*
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-.clearfix, .btn-medias, .m-post .footer {
+.clearfix, .btn-medias, .m-post .footer, .block-form {
   *zoom: 1; }
 
 /* =Layout
@@ -467,9 +468,9 @@ input[type="search"]::-webkit-search-decoration {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  border: 0;
+  margin: 0;
+  padding: 0; }
 
 /**
  * 1. Correct `color` not being inherited in IE 8/9.
@@ -689,6 +690,9 @@ textarea {
 /* ==|====================
    Layout/Nav
    ======================= */
+.toggle-btn {
+  display: none; }
+
 /* ==|====================
    Layout/Footer
    ======================= */
@@ -698,7 +702,8 @@ textarea {
 
 .l-footer-container {
   background: white;
-  padding: 79px 106px; }
+  padding: 79px 5% 150px;
+  position: relative; }
 
 .btn-medias {
   width: 190px;
@@ -713,6 +718,61 @@ textarea {
     position: relative;
     top: 15px;
     color: white; }
+
+.footer-right {
+  margin-top: 50px; }
+
+@media screen and (min-width: 62em) {
+  .l-footer-container {
+    padding: 79px 106px; }
+
+  .footer-left {
+    float: left;
+    width: 60%;
+    border-right: 1px solid #e3e3e3;
+    padding: 0 90px 0 21px;
+    position: relative;
+    height: 100%; }
+
+  .footer-right {
+    float: right;
+    margin-top: 0;
+    width: 40%;
+    padding: 0 21px 0 110px; } }
+.l-footer {
+  font-weight: lighter; }
+
+h3 {
+  text-transform: uppercase;
+  font-weight: normal; }
+
+.footer-right input, .footer-right .btn {
+  width: 100%;
+  margin-bottom: 22px;
+  max-width: 400px; }
+.footer-right .btn {
+  font-weight: bold;
+  margin-bottom: 0;
+  padding-bottom: 0; }
+
+.copyright {
+  position: absolute;
+  bottom: 30px; }
+  .copyright::before {
+    content: "|";
+    position: absolute;
+    top: 0;
+    color: #eabccb;
+    left: 0; }
+  .copyright p {
+    padding: 0;
+    margin: 0 0 0 13px;
+    font-weight: normal; }
+  .copyright .legend {
+    font-weight: lighter; }
+  @media screen and (min-width: 62em) {
+    .copyright {
+      bottom: 0; } }
 
 /* ==|======================
    Layout/Home
@@ -905,21 +965,34 @@ textarea {
 /* ==|====================
    Module/Posts
    ======================= */
-@media screen and (min-width: 62em) {
-  .m-post-contenair {
-    width: 50%;
-    float: left; } }
-@media screen and (min-width: 75em) {
-  .m-post-contenair {
-    width: 32%;
-    margin-right: 2%; } }
+.m-post-contenair {
+  margin-bottom: 2%; }
+  @media screen and (min-width: 62em) {
+    .m-post-contenair {
+      width: 49%;
+      float: left;
+      margin-right: 2%; } }
+  @media screen and (min-width: 75em) {
+    .m-post-contenair {
+      width: 32%;
+      margin-right: 2%; } }
+
+@media screen and (min-width: 62em) and (max-width: 1199px) {
+  .m-post-contenair:nth-child(2n+0) {
+    margin-right: 0; } }
 
 @media screen and (min-width: 75em) {
   .m-post-contenair:nth-child(3n+0) {
     margin-right: 0; } }
 
 .m-posts {
-  margin: 46px 0 123px; }
+  margin: 30px 4.5%; }
+  @media screen and (min-width: 62em) {
+    .m-posts {
+      margin: 46px 2% 123px; } }
+  @media screen and (min-width: 75em) {
+    .m-posts {
+      margin: 46px 0 123px; } }
 
 .m-post {
   position: relative; }
@@ -994,5 +1067,119 @@ textarea {
   .m-steps span {
     display: block;
     text-transform: uppercase; }
+
+/* ==|================
+   Module/Form search
+   =================== */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="search"],
+input[type="tel"],
+textarea, select {
+  font-size: 18px;
+  font-weight: lighter;
+  color: #484a50;
+  padding: 11px;
+  outline: 0;
+  border-radius: none;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #b2b3b5;
+  height: 33px;
+  -webkit-appearance: none;
+  box-shadow: none; }
+  input[type="text"]::-webkit-input-placeholder,
+  input[type="email"]::-webkit-input-placeholder,
+  input[type="password"]::-webkit-input-placeholder,
+  input[type="date"]::-webkit-input-placeholder,
+  input[type="search"]::-webkit-input-placeholder,
+  input[type="tel"]::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder, select::-webkit-input-placeholder {
+    color: #b2b3b5; }
+  input[type="text"]:-moz-placeholder,
+  input[type="email"]:-moz-placeholder,
+  input[type="password"]:-moz-placeholder,
+  input[type="date"]:-moz-placeholder,
+  input[type="search"]:-moz-placeholder,
+  input[type="tel"]:-moz-placeholder,
+  textarea:-moz-placeholder, select:-moz-placeholder {
+    color: #b2b3b5; }
+  input[type="text"]:-ms-input-placeholder,
+  input[type="email"]:-ms-input-placeholder,
+  input[type="password"]:-ms-input-placeholder,
+  input[type="date"]:-ms-input-placeholder,
+  input[type="search"]:-ms-input-placeholder,
+  input[type="tel"]:-ms-input-placeholder,
+  textarea:-ms-input-placeholder, select:-ms-input-placeholder {
+    color: #b2b3b5; }
+
+.form-search input[type="text"],
+.form-search .formt-text {
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+  border-right: none; }
+.form-search .btn {
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+  vertical-align: top;
+  padding: .35em .6em; }
+
+/* .form-search */
+.block-form fieldset.block-input, .block-form input, .block-form .btn {
+  float: left; }
+.block-form input {
+  border: 1px solid #eabccb;
+  height: 35px; }
+.block-form .btn {
+  border-radius: 0;
+  height: 35px;
+  margin-left: -1px; }
+
+/* ==|====================
+  	Module/Modal
+   ======================= */
+#general-background {
+  display: none;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50; }
+
+.m-modal-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 50px;
+  right: 50px;
+  z-index: 1000;
+  background: url("img/gradient-modal.jpg") no-repeat center center;
+  background-size: 100% 100%; }
+
+.m-modal {
+  background: white;
+  text-align: center;
+  padding: 50px;
+  margin: 10px; }
+  .m-modal input, .m-modal .btn {
+    margin-bottom: 22px;
+    width: 100%;
+    max-width: 500px; }
+  .m-modal .btnclose {
+    cursor: pointer;
+    display: block;
+    background: url("img/todobtnmodal.jpg") no-repeat center center;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 20px;
+    top: 20px; }
 
 /*# sourceMappingURL=screen.css.map */
