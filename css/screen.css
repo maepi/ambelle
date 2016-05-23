@@ -645,7 +645,7 @@ textarea {
 
   .nav {
     float: right;
-    width: 460px; }
+    width: 363px; }
 
   .nav-li {
     float: left;
@@ -657,13 +657,41 @@ textarea {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center center;
-  margin: 0 auto;
+  margin: 20px auto;
   height: 100%; }
+  @media screen and (min-width: 62em) {
+    .ir-logo1 {
+      margin: 0px auto; } }
 
 .backgroundsize .ir-logo1 {
   background-image: url("img/logo.jpg"); }
 
+/* ==|====================
+   Layout/Nav
+   ======================= */
+/* togglebtn */
+.toggle-btn {
+  background: url("img/todobtnmenu.jpg") no-repeat center center;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer; }
+  @media screen and (min-width: 62em) {
+    .toggle-btn {
+      display: none; } }
+
+.toggle-btn.close {
+  background: url("img/todobtnmodal.jpg") no-repeat center center; }
+
 /* Nav */
+.l-nav.hide {
+  display: none; }
+  @media screen and (min-width: 62em) {
+    .l-nav.hide {
+      display: block; } }
+
 @media screen and (max-width: 61em) {
   .nav-li a {
     width: 100%;
@@ -688,12 +716,6 @@ textarea {
     color: #eabccb; } }
 
 /* ==|====================
-   Layout/Nav
-   ======================= */
-.toggle-btn {
-  display: none; }
-
-/* ==|====================
    Layout/Footer
    ======================= */
 .l-footer {
@@ -708,16 +730,19 @@ textarea {
 .btn-medias {
   width: 190px;
   margin: 0px auto;
-  text-align: center; }
+  text-align: center;
+  height: 60px; }
   .btn-medias li {
     display: inline-block;
     width: 60px;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    height: 60px; }
   .btn-medias a {
     position: relative;
     top: 15px;
-    color: white; }
+    color: white;
+    font-size: 1.5em; }
 
 .footer-right {
   margin-top: 50px; }
@@ -788,7 +813,12 @@ h3 {
   color: white;
   font-size: 14px;
   border-radius: 25px;
-  border: 1px solid transparent; }
+  border: 1px solid transparent;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
   .btn:hover {
     background: white;
     color: #eabccb;
@@ -801,7 +831,12 @@ h3 {
   color: #eabccb;
   font-size: 14px;
   border-radius: 25px;
-  border: 1px solid #eabccb; }
+  border: 1px solid #eabccb;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
   .btn-invert:hover {
     background: #eabccb;
     color: white; }

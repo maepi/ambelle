@@ -12,6 +12,8 @@
 	font-size:14px;
 	border-radius:25px;
 	border:1px solid transparent;
+
+	@include transition();
 	&:hover 
 	{
 		background:$clr-btn;
@@ -29,6 +31,8 @@
 	font-size:14px;
 	border-radius:25px;
 	border:1px solid $bg-btn;
+
+	@include transition();
 	&:hover 
 	{
 		background: $bg-btn;

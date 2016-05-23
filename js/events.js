@@ -24,7 +24,14 @@ $(document).ready(function(){
         $(this).parent().toggleClass('open');
     });
 */
-    
+    $('.l-nav').addClass('hide');
+
+    $('#toggle-btn').click(function(e){
+        e.preventDefault();
+        $('.l-nav').toggleClass('hide');
+        $('#toggle-btn').toggleClass('close');
+    });
+
     $('#takethetest').click(function(e){
         e.preventDefault();
         $('#modal').fadeIn();

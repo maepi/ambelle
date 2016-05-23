@@ -2,10 +2,71 @@
    Layout/Nav
    ======================= */
 
-.l-nav {
+
+/* togglebtn */
+// ----------------
+
+.toggle-btn 
+{
+	background:url('img/todobtnmenu.jpg') no-repeat center center;
+	width:25px;
+	height:25px;
+	position:absolute;
+	right:20px;
+	top:20px;
+	cursor:pointer;
+
+	@media screen and (min-width: $medium ) {
+		display:none;
+	}
+}
+.toggle-btn.close 
+{
+	background:url('img/todobtnmodal.jpg') no-repeat center center;
 }
 
-.toggle-btn
+/* Nav */
+// ----------------
+.l-nav.hide {
+	display:none;
+	@media screen and (min-width: $medium ) {
+		display:block;
+	}
+}
+
+
+.nav-li
 {
-	display:none
+	@media screen and (max-width: $medium - 1 ) {
+		a 
+		{
+			width:100%;
+			display:block;
+			padding:15px 0;
+			border:0;
+			border-radius:0;
+		}
+		a:hover 
+		{
+			background:$pink;
+			color:white;
+			border:0;
+			font-weight:bold;
+			border-radius:0;
+		}
+	}
+	@media screen and (min-width: $medium ) {
+		a:hover 
+		{
+			background:none;
+			font-weight:normal;
+			border-bottom:1px solid; 
+			color:$grey;
+		}
+		a.btn:hover 
+		{
+			border-bottom:1px solid $pink;
+			color:$pink;
+		}
+	}
 }

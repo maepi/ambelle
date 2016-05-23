@@ -25,7 +25,7 @@
 	.nav 
 	{
 		float:right;
-		width:460px;
+		width: 363px;
 	}
 	.nav-li
 	{
@@ -49,8 +49,12 @@
 	background-repeat:no-repeat;
 	background-size:100%;
 	background-position:center center;
-	margin:0 auto;
+	margin:20px auto;
 	height:100%;
+
+	@media screen and (min-width: $medium ) {
+		margin:0px auto;
+	}
 }
 .backgroundsize .ir-logo1
 {
@@ -58,40 +62,4 @@
 }
 
 
-/* Nav */
-// ----------------
-.nav-li
-{
-	@media screen and (max-width: $medium - 1 ) {
-		a 
-		{
-			width:100%;
-			display:block;
-			padding:15px 0;
-			border:0;
-			border-radius:0;
-		}
-		a:hover 
-		{
-			background:$pink;
-			color:white;
-			border:0;
-			font-weight:bold;
-			border-radius:0;
-		}
-	}
-	@media screen and (min-width: $medium ) {
-		a:hover 
-		{
-			background:none;
-			font-weight:normal;
-			border-bottom:1px solid; 
-			color:$grey;
-		}
-		a.btn:hover 
-		{
-			border-bottom:1px solid $pink;
-			color:$pink;
-		}
-	}
-}
+
