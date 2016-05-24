@@ -16,6 +16,7 @@
 	position:relative;
     overflow:hidden;
     padding:0;
+    width: 100%;
     @media screen and (min-width: $medium) {
         height: 609px;
     	&:before 
@@ -71,8 +72,16 @@
     	margin:40px;
     	@extend .specialtypo;
         font-size:3em;
+
+        /* to modify */
+        font-size:2em;
+        /* */
         @media screen and (min-width: $medium) {
-    	   font-size:4.5em;
+    	    font-size:4.5em;
+
+            /* to modify */
+            font-size: 3.5em;
+            /* */
         }
     	line-height:1;
     	span 
@@ -87,6 +96,9 @@
     p 
     {
     	font-weight: lighter;
+        /* to modify */
+        font-size: 0.9em;
+        /* */
     }
 
 }

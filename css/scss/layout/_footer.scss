@@ -25,6 +25,10 @@
 	text-align:center;
 	@extend .clearfix;
 	height:60px;
+
+	/* to modify */
+	width: 290px;
+	/* */
 	li 
 	{
 		display:inline-block;
@@ -48,6 +52,21 @@
 {
 	margin-top:50px;
 }
+/* to modify */
+.footer-center
+{
+	margin:0 auto;
+	max-width: 600px;
+	text-align:center;
+	.block-form 
+	{
+		margin: 0 auto;
+	    display: block;
+	    text-align: center;
+	    width: 288px;
+	}
+}
+/* */
 @media screen and (min-width: $medium) {
 	.l-footer-container 
 	{

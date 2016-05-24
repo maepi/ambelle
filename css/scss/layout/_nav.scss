@@ -38,6 +38,16 @@
 .nav-li
 {
 	@media screen and (max-width: $medium - 1 ) {
+		/* to modify */
+		text-align:center;
+		font-size:2em;
+		width:25%; 
+		float:left;
+		span 
+		{
+			display:none;
+		}
+		/* */
 		a 
 		{
 			width:100%;
@@ -56,6 +66,14 @@
 		}
 	}
 	@media screen and (min-width: $medium ) {
+		/* to modify */
+		width: 25px;
+		font-size:1.5em;
+		span 
+		{
+			display:none;
+		}
+		/* */
 		a:hover 
 		{
 			background:none;
@@ -69,4 +87,5 @@
 			color:$pink;
 		}
 	}
+	
 }
