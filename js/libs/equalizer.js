@@ -1,6 +1,7 @@
 
 /*********************************
 *	@name : Equalizer
+* 	AUTHOR: Gabygaël Pirson
 *	Exemples : 
 	case A: via data-attributes
 	add [data_equalizer_max="group_elements"] attribute to set the biggest heigth 
