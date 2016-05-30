@@ -647,8 +647,12 @@ textarea {
     float: right;
     width: 363px;
     /* to modify */
-    width: 271px;
+    width: 371px;
     /* */ }
+
+  .nav-li:first-child {
+    width: 100px;
+  }
 
   .nav-li {
     float: left;
@@ -703,8 +707,8 @@ textarea {
     width: 25%;
     float: left;
     /* */ }
-    .nav-li span {
-      display: none; }
+    /*.nav-li span {
+      display: none; }*/
     .nav-li a {
       width: 100%;
       display: block;
@@ -723,8 +727,8 @@ textarea {
     width: 25px;
     font-size: 1.5em;
     /* */ }
-    .nav-li span {
-      display: none; }
+    /*.nav-li span {
+      display: none; }*/
     .nav-li a:hover {
       background: none;
       font-weight: normal;
@@ -984,7 +988,7 @@ h3 {
   width: 100%; }
   @media screen and (min-width: 62em) {
     .m-slide-wrapper {
-      height: 609px; }
+      height: 700px; }
       .m-slide-wrapper:before {
         background: url("img/sheyda2.png") no-repeat bottom left;
         content: " ";
