@@ -647,8 +647,12 @@ textarea {
     float: right;
     width: 363px;
     /* to modify */
-    width: 271px;
+    width: 371px;
     /* */ }
+
+  .nav-li:first-child {
+    width: 100px;
+  }
 
   .nav-li {
     float: left;
@@ -703,8 +707,8 @@ textarea {
     width: 25%;
     float: left;
     /* */ }
-    .nav-li span {
-      display: none; }
+    /*.nav-li span {
+      display: none; }*/
     .nav-li a {
       width: 100%;
       display: block;
@@ -723,8 +727,8 @@ textarea {
     width: 25px;
     font-size: 1.5em;
     /* */ }
-    .nav-li span {
-      display: none; }
+    /*.nav-li span {
+      display: none; }*/
     .nav-li a:hover {
       background: none;
       font-weight: normal;
@@ -843,7 +847,7 @@ h3 {
 .btn {
   text-transform: uppercase;
   padding: 0.5em 1em;
-  background: #eabccb;
+  background: #E5A5B6;
   color: white;
   font-size: 14px;
   border-radius: 25px;
@@ -855,24 +859,24 @@ h3 {
   transition: all 0.3s ease-in-out; }
   .btn:hover {
     background: white;
-    color: #eabccb;
-    border: 1px solid #eabccb; }
+    color: #E5A5B6;
+    border: 1px solid #E5A5B6; }
 
 .btn-invert {
   text-transform: uppercase;
   padding: 0.5em 1em;
   background: white;
-  color: #eabccb;
+  color: #E5A5B6;
   font-size: 14px;
   border-radius: 25px;
-  border: 1px solid #eabccb;
+  border: 1px solid #E5A5B6;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
   .btn-invert:hover {
-    background: #eabccb;
+    background: #E5A5B6;
     color: white; }
 
 .btn-likes::before {
@@ -899,7 +903,7 @@ h3 {
   content: "\70"; }
 
 .link-pink {
-  color: #eabccb;
+  color: #E5A5B6;
   font-weight: lighter;
   font-size: 15px; }
   .link-pink::before {
@@ -984,9 +988,9 @@ h3 {
   width: 100%; }
   @media screen and (min-width: 62em) {
     .m-slide-wrapper {
-      height: 609px; }
+      height: 700px; }
       .m-slide-wrapper:before {
-        background: url("img/bg-girl.png") no-repeat bottom left;
+        background: url("img/sheyda2.png") no-repeat bottom left;
         content: " ";
         position: absolute;
         bottom: 0;
